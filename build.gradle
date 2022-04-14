@@ -9,11 +9,14 @@ repositories {
 dependencies {
     testImplementation(
             "com.codeborne:selenide:6.4.0",
-            "org.junit.jupiter:junit-jupiter:5.8.2"
+            "org.junit.jupiter:junit-jupiter:5.8.2",
+            "org.slf4j:slf4j-simple:1.7.36"
     )
 }
-
-tasks.withType(JavaCompile) {
+compileJava {
+    options.encoding = 'UTF-8'
+}
+compileTestJava {
     options.encoding = 'UTF-8'
 }
 
