@@ -19,7 +19,7 @@ public class WebMindTest {
             "Решения"
     })
     @ParameterizedTest(name = "Проверка текста в навигации по слову {0}")
-    void  ComMenuTest(String testData) {
+    void  comMenuTest(String testData) {
 
         Selenide.open("https://www.comindware.com/ru/");
 
@@ -35,7 +35,7 @@ public class WebMindTest {
             delimiter = '|'
     )
     @ParameterizedTest(name = "Проверка открытия меню {0}, ожидаем {1}")
-    void  ComProductComplexTest(String testData, String expectedResult) {
+    void  comProductComplexTest(String testData, String expectedResult) {
         Selenide.open("https://www.comindware.com/ru/");
 
         $("#productsMenu").click();
@@ -55,18 +55,18 @@ public class WebMindTest {
 
     @MethodSource
     @ParameterizedTest
-    void methodSourceExampleTest(String first, String second){
+    void methodSourceExampleTest(String name, String description){
         Selenide.open("https://www.comindware.com/ru/");
         $("#productsMenu").click();
-        $(".menu-list").$(byText(first)).click();
+        $(".menu-list").$(byText(name)).click();
         $(".mb-sm-3.pageLead")
-                .shouldHave(text(second));
+                .shouldHave(text(description));
     }
 
 
     @EnumSource(NavigationItem.class)
     @ParameterizedTest()
-    void  NavComMenuTest(NavigationItem testData) {
+    void  navComMenuTest(NavigationItem testData) {
 
         Selenide.open("https://www.comindware.com/ru/");
 
