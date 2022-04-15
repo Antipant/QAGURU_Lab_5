@@ -1,5 +1,4 @@
 package ru.antipant;
-import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.*;
 
 @DisplayName("Класс с демонстрационными тестами")
@@ -9,10 +8,12 @@ public class SimpleTest {
     void beforeAll(){
         Assertions.assertTrue(2<3);
     }
+
     @BeforeEach
     void beforeEach(){
         Assertions.assertTrue(2<3);
     }
+
     @DisplayName("Демонстрационный тест")
     @Test
     void firstTest() {
@@ -29,10 +30,12 @@ public class SimpleTest {
     void secondTest() {
         Assertions.assertTrue(3<2);
     }
+
     @AfterEach
     void afterEach(){
         Assertions.assertTrue(2<3);
     }
+
     @AfterAll
     void afterAll(){
         Assertions.assertTrue(2<3);

@@ -1,14 +1,10 @@
 package ru.antipant;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
-import ru.antipant.domain.MenuItem;
 import ru.antipant.domain.NavigationItem;
-
-import java.util.List;
 import java.util.stream.Stream;
 
 import static com.codeborne.selenide.Condition.text;
